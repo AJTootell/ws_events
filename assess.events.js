@@ -317,7 +317,7 @@ QUnit.test(
         );
 
         window.newid.value = 'Obi van Kenobi';
-        window.newid.dispatchEvent( new InputEvent("input") );
+        window.newid.dispatchEvent( new InputEvent("input") );//InputEvent is only compatible with firefox
 
         assert.ok(
           window.getComputedStyle(window.newiderror).display == "none" &&
